@@ -1,0 +1,35 @@
+.topbar {
+    background-color: #4a4643;
+    height: 70px;
+    width: 100;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    align-items: left;
+    padding: 15px 20px;
+    margin: 10px 20px 0px 20px;
+    box-sizing: border-box;
+}
+
+.sub-topbar {
+    background-color: #e5e0da;
+    width: 100;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: block;
+    justify-content: center;
+    padding: 15px 20px;
+    margin: 0px 20px 10px 20px;
+    border: #4a464363 1px solid;
+    box-sizing: border-box;
+}
+
+h3 {
+    color: #000000;
+    font-size: 18px;
+    font-weight: 300;
+    margin-left: 10px;
+    text-align: center;
+}
