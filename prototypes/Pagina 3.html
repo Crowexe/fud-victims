@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang=" en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title> OBSERVACIONES PRELIMINARES DEL/LA SERVIDOR/A PÚBLICO/A O AUTORIDAD QUE LLENA EL FORMATO</title>
+    <style type="text/css">
+        textarea {
+            resize: none;
+        }
+        
+    </style>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+    <script>
+        function text(x){
+            if(x==0){
+            document.getElementById('otro').style.display='block';
+            document.getElementById('otro1').style.display='block';
+            }
+            else
+            document.getElementById('otro').style.display='none';
+            document.getElementById('otro1').style.display='block';
+            return;
+        }
+        function text1(y){
+            if(y==0)
+            document.getElementById('otra').style.display='block'
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <h3> VI. OBSERVACIONES PRELIMINARES DEL/LA SERVIDOR/A PÚBLICO/A O AUTORIDAD QUE LLENA EL FORMATO</h3>
+        <div><label for="">Tipo de dano sufrido (Seleccione los que apliquen)</label>
+        <input type="radio" name="D1" value="Fisico">Fisico
+        <input type="radio" name="D2" value="Fisico">Psicologico
+        <input type="radio" name="D3" value="Patrimonial">Patrimonial
+        <input type="radio" name="D4" value="Sexual">Sexual
+        <input type="radio" name="D5" value="otro" onclick="text(0)">otro
+        </div>
+
+        <div>
+            <br><label id="otro" for="" class="hidden">Especifique</label>
+        <br><textarea name="otro" id="otro1" rows="7" cols="30" class="hidden" ></textarea>
+        </div>
+        <div>
+        <h3> VII. AUTORIDADES QUE HAN CONOCIDO DE LOS HECHOS</h3>
+        <br><h5>Investigacion Ministerial</h5><label>¿Denuncio ante el Ministerio Publico?</label>
+        <label>Si</label><input type="radio" name="s" value="si">
+        <label>No</label><input type="radio" name="s" value="no">  &nbsp;&nbsp;&nbsp;&nbsp;<label>Fecha</label><input type="date">
+        <br><label for="comp"> Federal</label><input type="radio" name="comp" value="f">
+            <label for="comp">Local</label><input type="radio" name="comp" value="l">
+           <label>Entidad Federativa:</label><input type="text" name="Entidad" value="">
+        </div>
+        <div>
+            <br><label>Delito</label><input type="text" name="delito" value="">
+            <br><br><label>Numero de Juzgado</label><input type="text" name="juzgado" value="" size="10"> <label>Numero de proceso</label><input type="text" name="juzgado" value="">
+            <br><br><label>Estado de proceso Judicial</label><input type="text" name="estado" value="" size="10">
+        </div>
+        <div>
+            <br><h5>PROCEDIMIENTOS ANTE ORGANISMOS NACIONALES E INTERNACIONALES DE DERECHOS HUMANOS</h5><label>¿Presentó queja, petición u otro tipo de solicitud ante organismo de DD. HH.?</label>
+        <label>Si</label><input type="radio" name="sd" value="si">
+        <label>No</label><input type="radio" name="sd" value="no">  &nbsp;&nbsp;&nbsp;&nbsp;<label>Fecha</label><input type="date">
+        <br><label for="comp"> Federal</label><input type="radio" name="comp" value="f">
+            <label for="comp">Local</label><input type="radio" name="comp" value="l">
+            <label for="comp">Internacional</label><input type="radio" name="comp" value="i">
+           <label>Organismo:</label><input type="text" name="organismo" value="">
+        </div>
+        <div>
+            <br><label>Violación a DD. HH</label><input type="text" name="vDD" value="">
+            <br><br><label>Autoridad Responsable</label><input type="text" name="autoridad" value="" size="10"> 
+            <label><h5>Tipo de resolucion</h5></label>
+            <label>Recomendacion</label><input type="radio" name="res" value="recomendacion">
+            <label>Conciliación</label><input type="radio" name="res" value="conciliación">
+            <label>Medidas precautorias</label><input type="radio" name="res" value="medidas">
+            <br><label>Otra</label><input type="radio" name="otra" value="otra" onclick="text1(0)"><input type="text" name="otra" value="" size="15" id="otra" class="hidden">
+            <br><label>Folio</label><input type="text" name="folio" value="" size="15">
+            <label>Estado actual</label><input type="text" name="estA" value="" size="15">
+            <br><br><label>OTRA AUTORIDAD</label><input type="text" name="estA" value="" size="20">
+
+
+
+        </div>
+        
+    </form>
+
+</body>
+</html>

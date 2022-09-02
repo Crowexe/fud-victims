@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formato de declaracion</title>
+  <link rel="stylesheet" href="style.css">
+  <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+  <section class="cabeza">
+    <div class="gob">
+      <h1>gob.mx</h1>
+    </div>
+    <div class="titulo">
+      <h2>Comision Ejecutiva de Atencion a Victimas</h2>
+      <h2>Formato Unico de declaraciones</h2>
+    </div>
+  </section>
+
+  <form>
+
+    <section class="dataSoli">
+      <label for="">Lugar y fecha de la solicitud</label>
+      <input type="text" placeholder="Lugar" name="lugar">
+      <input type="text" placeholder="DD/MM/AAAA" name="fecha">
+    </section>
+
+    <section class="genData">
+
+      <div>
+        <input type="radio" name="soliBy" id="victimaA" value="a" onclick="activate(0)">
+        <label for="victima">Victima</label>
+      </div>
+
+      <div>
+        <input type="radio" name="soliBy" id="victimaB" value="b" onclick="activate(1)">
+        <label for="victima">Victima B</label>
+      </div>
+
+      <div>
+        <input type="radio" name="soliBy" id="victimaC" value="c" onclick="activate(1)">
+        <label for="victima">Servidor publico</label>
+      </div>
+
+      <div>
+        <input type="radio" name="soliBy" id="victimaD" value="d" onclick="activate(2)">
+        <label for="victima">Representante legal</label>
+      </div>
+
+      <section id="parteUno" style="display: none;">
+
+        <div class="titulo">
+          <h2>I. DATOS DE/LA SOLICITANTE</h2>
+        </div>
+
+        <div>
+          <label for="">Nombre(s)</label>
+          <input type="text">
+        </div>
+        <div>
+          <label for="">Primer apellido</label>
+          <input type="text">
+        </div>
+        <div>
+          <label for="">Segundo apellido</label>
+          <input type="text">
+        </div>
+        <div>
+          <label for="">Parentesco/Relacion</label>
+          <input type="text">
+        </div>
+        <div>
+          <label for="">Cargo</label>
+          <input type="text">
+        </div>
+        <div>
+          <label for="">Dependencia o institucion</label>
+          <input type="text">
+        </div>
+        <div>
+          <label for="">Telefono movil</label>
+          <input type="text">
+        </div>
+        <div>
+          <label for="">Telefono fijo</label>
+          <input type="text">
+        </div>
+        <div>
+          <label for="">Correo</label>
+          <input type="text">
+        </div>
+        <div>
+          <label for="">Otros datos de contacto</label>
+          <input type="text">
+        </div>
+
+      </section>
+
+      <section id="parteDos" style="display: none;">
+
+        <div class="titulo">
+          <h2>II. TIPO Y DATOS DE LA VICTIMA</h2>
+        </div>
+
+        <div>
+          <h5>Tipo</h5>
+          <input type="checkbox" value="1" id="dir" name="check" /> Directa<br />
+          <input type="checkbox" value="2" id="in" name="check" /> Indirecta<br />
+          <input type="checkbox" value="3" id="pot" name="check" /> Potencial<br />
+        </div>
+
+        <div>
+          <label for="">Nombre(s)</label>
+          <input type="text">
+        </div>
+        <div>
+          <label for="">Primer apellido</label>
+          <input type="text">
+        </div>
+        <div>
+          <label for="">Segundo apellido</label>
+          <input type="text">
+        </div>
+        <div>
+          <label for="">Fecha de nacimiento</label>
+          <input type="text">
+        </div>
+
+        <div>
+          <h5>Sexo</h5>
+          <input type="checkbox" value="1" id="h" name="check" /> Hombre<br />
+          <input type="checkbox" value="2" id="m" name="check" /> Mujer<br />
+          <input type="checkbox" value="3" id="o" name="check" /> Otro<br />
+        </div>
+
+        <div>
+          <label for="">Nacionalidad</label>
+          <input type="text">
+        </div>
+        <div>
+          <label for="">CURP</label>
+          <input type="text">
+        </div>
+        <div>
+          <label for="">Lugar de nacimiento</label>
+          <input type="text" placeholder="Pais">
+          <input type="text" placeholder="Entidad Federativa">
+          <input type="text" placeholder="Delegacion o Municipio">
+          <input type="text" placeholder="Poblacion o comunidad">
+        </div>
+
+        <div>
+          <h5>Estado civil</h5>
+          <input type="checkbox" value="1" id="h" name="check" /> Soltero/a<br />
+          <input type="checkbox" value="2" id="m" name="check" /> Casado/o<br />
+          <input type="checkbox" value="3" id="o" name="check" /> Otro<br />
+          <input type="text" name="" id="">
+        </div>
+
+        <div>
+          <label for="">Calle</label>
+          <input type="text">
+        </div>
+
+        <div>
+          <label for="">Numero exterior</label>
+          <input type="text">
+        </div>
+        <div>
+          <label for="">Numero Interior</label>
+          <input type="text">
+        </div>
+        <div>
+          <label for="">Codigo Postal</label>
+          <input type="text">
+        </div>
+        <div>
+          <label for="">Colonia</label>
+          <input type="text">
+        </div>
+        <div>
+          <label for="">Localidad</label>
+          <input type="text">
+        </div>
+        <div>
+          <label for="">Delegacion o Municipio</label>
+          <input type="text">
+        </div>
+        <div>
+          <label for="">Entidad Federativa</label>
+          <input type="text">
+        </div>
+        <div>
+          <label for="">Telefono</label>
+          <input type="text">
+        </div>
+      
+      </section>
+
+    </section>
+
+    <button type="submit">Siguiente</button>
+    
+
+  </form>
+
+  <script type="text/javascript">
+
+    function activate(elemento) {
+      if (elemento == 0) {
+        document.getElementById("parteDos").style.display = "block";
+        document.getElementById("parteUno").style.display = "none";
+      } else {
+        if (elemento == 1) {
+          document.getElementById("parteDos").style.display = "block";
+          document.getElementById("parteUno").style.display = "block";
+        } else {
+          document.getElementById("parteDos").style.display = "none";
+          document.getElementById("parteUno").style.display = "none";
+        }
+      }
+    }
+
+
+  </script>
+
+</body>
+
+</html>
