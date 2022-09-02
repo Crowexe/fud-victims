@@ -4,7 +4,7 @@ const Pagina2 = () => {
 
     return (
         <div>
-             <div className="sub-topbar">
+            <div className="sub-topbar">
                 <h3>III. RELACIÓN DE LA VÍCTIMA INDIRECTA CON LA VÍCTIMA DIRECTA</h3>
             </div>
             <div className="primer-bloque">
@@ -14,105 +14,57 @@ const Pagina2 = () => {
                 </div>      
                 <div className="bloque-abajo">
                     <button className="add" type="submit">+</button>
-                    <input type="text" className="Nombre-victima" placeholder="Nombre completo de la victima directa"/>
-                    <input type="text" className="relacion-victima" placeholder="Nombre completo de la victima directa"/>
+                    <input type="text" className="nombre-victima" placeholder="Nombre completo de la victima directa"/>
+                    <input type="text" className="relacion-victima" placeholder="Relación con la victima directa"/>
                 </div>
-
             </div>
-            <div>
-                <section>
-                    <label for="Nombre">En caso de ser menor de edad, indique el nombre del tutor/a</label>
-                    <input type="text" name="Nombre del tutor/a" id="Nombre" placeholder="Indique el nombre de tutor/a"/>
-                    <label for="Contacto">Indique datos de contacto del tutor/a</label>
-                    <input type="text" name="Datos de contacto de tutor/a" id="Datos de contacto" placeholder="Indique datos de contacto"/>
-                </section>
-
-                <label for="Adulto mayor">¿Eres adulto mayor?</label>
-
-                <select name="Eres adulto mayor">
-                    <option selected disabled="">Selecciona una opcion</option> 
-                    <option value="Si">Si</option>
-                    <option value="No">No</option>
-                </select>
-
-                <section>
-                    <label for="Situacion">¿Te encuentras en situacion de calle?</label>
-                    <select name="Situacion">
-                        <option selected disabled="">Selecciona una opcion</option> 
-                        <option value="Si">Si</option>
-                        <option value="No">No</option>
+            <div className="primer-bloque">
+                <div className="bloque-arriba">
+                    <label className="titulo-identificacion">¿Cuentas con identificación?</label>
+                    <input className="id-true" type="checkbox"/>
+                </div>      
+                <div className="bloque-identificacion">
+                    <select className="identificion">
+                        <option selected disabled="">Selecciona la identificación que se adjuntará</option> 
+                        <option value="Cartilla">Cartilla del servicio militar</option>
+                        <option value="Pasaporte">Pasaporte</option>
+                        <option value="Cédula profesional ">Cédula profesional </option>
+                        <option value="medica">Credencial oficial expedida por el IMSS o ISSSTE</option>
+                        <option value="constancia de estudios">constancia de estudios</option>
+                        <option value="Constancia de residencia expedida por autoridad local">Constancia de residencia expedida por autoridad local</option>
+                        <option value="Tarjeta de residencia tempora">Tarjeta de residencia tempora</option>
+                        <option value="Tarjeta de residencia permanente">Tarjeta de residencia permanente</option>
+                        <option value="INE">Credencial de elector</option>
                     </select>
-                </section>
-
-                <section>
-                    <label for="Discapacidad">¿Tiene condicion de discapacidad?</label>
-                    <select name="Discapacidad">
-                        <option selected disabled="">Selecciona una opcion</option> 
-                        <option value="Si">Si</option>
-                        <option value="No">No</option>
-                    </select>
-                </section>
-
-                <section>
-                    <label for="Tipo">Tipo de discapacidad</label>
-                    <select name="Tipo">
-                        <option selected disabled="">Selecciona una opcion</option> 
-                        <option value="Fisica">Fisica</option>
-                        <option value="Mental">Mental</option>
-                        <option value="Auditiva">Auditiva</option>
-                        <option value="Visual">Visual</option>
-                        <option value="Intelectual">Intelectual</option>
-                    </select>
-                </section>
-
-                <section>
-                    <label for="Dependencia">Grado de dependencia</label>
-                    <select name="Dependencia">
-                        <option selected disabled="">Selecciona una opcion</option> 
-                        <option value="Moderada">Moderada</option>
-                        <option value="Severa">Severa</option>
-                        <option value="Gran dependencia">Gran dependencia</option>
-                    </select>
-                </section>
-
-                <section>
-                    <label for="Migrante">¿Eres migrante?</label>
-                    <select name="Migrante">
-                        <option selected disabled="">Selecciona una opcion</option> 
-                        <option value="Si">Si</option>
-                        <option value="No">No</option>
-                    </select>
-                </section>
-
-                <section>
-                    <label for="Migrante">Pais de origen</label>
-                    <input type="text" name="Pais de origen" id="P origen" placeholder="Pais de origen"/>
-                    <label for="Contacto">Pais de destino</label>
-                    <input type="text" name="Pais de destino" id="P destino" placeholder="Pais de destino"/>
-                </section>
-
-                <section>
-                    <label for="Traductor">¿Requiere de traductor?</label>
-                    <select name="Traductor">
-                        <option selected disabled="">Selecciona una opcion</option> 
-                        <option value="Si">Si</option>
-                        <option value="No">No</option>
-                    </select>
-                </section>
-
-                <section>
-                    <label for="Comunidad">¿Pertenece a alguna comunidad indigena?</label>
-                    <select name="Comunidad">
-                        <option selected disabled="">Selecciona una opcion</option> 
-                        <option value="Si">Si</option>
-                        <option value="No">No</option>
-                    </select>
-                </section>
-
-                <section>
-                    <label for="Comunidad">¿A que comunidad pertenece?</label>
-                    <input type="text" name="comunidad" id="comunidad" placeholder="Indique a que comunidad pertenece"/>
-                </section>
+                    <button className="adju-id" type="submit">📎</button>
+                </div>
+            </div>
+            <div className="sub-topbar">
+                <h3>V. LUGAR Y FECHA DE LOS HECHOS</h3>
+            </div>
+            <div className="primer-bloque">
+                <div className="bloque-ubicacion">
+                    <input type="text" className="data-place" id="calle" placeholder="Calle"/>
+                    <input type="text" className="data-place" id="nExterior" placeholder="N° exterior"/>
+                    <input type="text" className="data-place" id="nInterior" placeholder="N° interior"/>
+                    <input type="text" className="data-place" id="CP" placeholder="Código postal"/>
+                    <input type="text" className="data-place" id="colonia" placeholder="Colonia"/>
+                    <input type="text" className="data-place" id="localidad" placeholder="Localidad"/>
+                    <input type="text" className="data-place" id="municipio" placeholder="Delegación o Municipio"/>
+                    <input type="text" className="data-place" id="entFederativa" placeholder="Entidad federativa"/>
+                    <input type="datatime" className="data-place" id="fecha" placeholder="Fecha"/>
+                </div>
+            </div>
+            <div className="sub-topbar">
+                <h3>RELATO DE LOS HECHOS</h3>
+            </div>
+            <div className="primer-bloque">
+                <div className="bloque-arriba">
+                    <label className="titulo-relato">Por favor relate las circunstancias de modo, tiempo y lugar, antes, durante y después de los hechos victimizantes. En caso de contar con alguna constancia o documento ministerial, jurisdiccional o de organismos nacionales o internacionales de derechos humanos en donde se dé cuenta del mismo, anexarlo al presente formato. En caso de que los hechos victimizantes atenten contra derechos colectivos, favor de referirlo</label>
+                </div>      
+                <div className="bloque-relato">
+                    <input type="text" className="relato" placeholder=""/>
+                </div>
             </div>
         </div>
     );
